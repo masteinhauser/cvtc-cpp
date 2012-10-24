@@ -35,7 +35,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/01.o \
 	${OBJECTDIR}/02.o
 
 
@@ -57,16 +56,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lesson01
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lesson02
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lesson01: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lesson02: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lesson01 ${OBJECTFILES} ${LDLIBSOPTIONS} 
-
-${OBJECTDIR}/01.o: 01.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/01.o 01.cpp
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lesson02 ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
 ${OBJECTDIR}/02.o: 02.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -79,7 +73,7 @@ ${OBJECTDIR}/02.o: 02.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lesson01
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lesson02
 
 # Subprojects
 .clean-subprojects:
